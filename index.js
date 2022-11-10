@@ -52,6 +52,8 @@ const projects = (data) => {
     
     document.querySelector("main").appendChild(section)
 
+    id(data.name)
+
     section.addEventListener("click", () => {
         window.open(data.html_url, "_blank")
     })
@@ -60,4 +62,8 @@ const projects = (data) => {
 
 const colorLanguage = () => {
     document.querySelector(".language>div").classList.add("purple")
+}
+
+const id = (name) => {
+    if(name == "Mini-Projects-Js") document.querySelector(".projects").id = "project1" 
 }

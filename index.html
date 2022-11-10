@@ -8,13 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
 </head>
 <body>
     <main>
         <section id="profile">
             <img src="" alt="Imagem de Perfil">
+            <noscript><img src="assets/profile.jpg" alt="Imagem de Perfil"></noscript>
             <h1>Thaís Silva</h1>
-            <h2>Front-End Developer</h2>
+            <p>Front-End Developer</p>
         </section>
 
         <section id="links">
@@ -44,13 +46,15 @@
 
         <section id="tech">
             <h2>Tecnologias</h2>
-            <p>JavaScript</p>
-            <p>CSS</p>
-            <p>HTML</p>
-            <p>Git</p>
-            <p>GitHub</p>
-            <p>NodeJS</p>
-            <p>ReactJS</p>
+            <div>
+                <p>JavaScript</p>
+                <p>CSS</p>
+                <p>HTML</p>
+                <p>Git</p>
+                <p>GitHub</p>
+                <p>NodeJS</p>
+                <p>ReactJS</p>
+            </div>
         </section>
 
         <section id="aboutMe">
@@ -58,7 +62,7 @@
             <div>
                 <p>No início de 2021, comecei a estudar Excel avançado e, então, despertei interesse pela área de TI. Foi quando comecei a pesquisar sobre e me apaixonei por programação.</p>
                 <p>Amo estudar e tenho facilidade em me adaptar e aprender novas tecnologias.</p>
-                <p>Estou a procura da primeira oportunidade na área.</p>
+                <p>Estou a procura da primeira oportunidade na área!</p>
             </div>
          </section>
 
@@ -116,10 +120,11 @@
                 </div>
             </section>
         </noscript>
+
+        <footer>
+            <p>Feito com ❤️ por Thaís Silva</p>
+        </footer>
     </main>
-    <footer>
-        <p>Feito com ❤️ por Thaís Silva</p>
-    </footer>
     <script src="index.js"></script>
 </body>
 </html>

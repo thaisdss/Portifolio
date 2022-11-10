@@ -1,0 +1,33 @@
+main{
+    display: grid;
+    grid-template-areas: 
+    "profile"
+    "links"
+    "aboutMe"
+    "tech";
+    justify-content: center;
+}
+
+#aboutMe{
+    width: 400px;
+    height: 300px;
+}
+
+#tech{
+    padding: 0px;
+}
+
+#tech div{
+   flex-direction: column;
+   justify-content: center;
+}
+
+#tech div p{
+    padding: 0;
+    border-radius: 0;
+    font-weight: normal;
+}
+
+#myProjects, .projects, #project1, footer{
+    display: none;
+}
