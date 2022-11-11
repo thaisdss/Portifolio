@@ -1,0 +1,125 @@
+@media(max-width: 1326px){
+    main{   
+        display: grid;
+        grid-template-areas: 
+        "profile aboutMe aboutMe"
+        "profile myProjects myProjects"
+        "links project1 project1"
+        "tech project2 project2"
+        "footer footer footer";
+        justify-content: start;
+        gap: 30px;
+    }
+
+    .projects{
+        max-width: 860px;
+    }
+
+    .project3, .project4{
+        display: none;
+    }
+}
+
+@media(max-width: 826px){
+    main{   
+        display: grid;
+        grid-template-areas: 
+        "profile"
+        "links"
+        "aboutMe"
+        "tech"
+        "myProjects"
+        "project1"
+        "project2"
+        "footer";
+        justify-content: center;
+        align-content: center;
+        gap: 30px;
+    }
+
+    section{
+        justify-self: center;
+    }
+
+    #profile, #links, #tech, #aboutMe,#myProjects, .projects{
+        min-width: 600px;
+        max-width: 600px;
+    }
+
+    #tech{
+     display:grid;
+     grid-template-areas: 
+     "h2"
+     "div";
+    }
+
+    #tech h2{
+        grid-area: h2;
+        height: 20px;
+        margin-bottom: 0px;
+    }
+
+    #tech div{
+        grid-area: div;
+        align-self: center;
+    }
+
+
+    .project3, .project4{
+        display: none;
+    }
+}
+
+@media(max-width: 660px){
+    #profile, #links, #tech, #aboutMe,#myProjects, .projects{
+        min-width: 500px;
+        max-width: 500px;
+    }
+
+    #tech{
+        min-height: 350px;
+    }
+    
+}
+
+@media(max-width: 554px){
+    #profile, #links, #tech, #aboutMe,#myProjects, .projects{
+        min-width: 400px;
+        max-width: 400px;
+    }
+}
+
+@media(max-width: 444px){
+    #profile, #links, #tech, #aboutMe,#myProjects, .projects{
+        min-width: 350px;
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 396px){
+    #profile, #links, #tech, #aboutMe,#myProjects, .projects{
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    #tech{
+        min-height: 500px;
+    }
+
+    #tech h2{
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 344px){
+    #profile, #links, #tech, #aboutMe,#myProjects, .projects{
+        min-width: 280px;
+        max-width: 280px;
+    }
+}
+
+@media(min-width: 554px) and (max-width: 826px){
+    #profile img{
+        width: 30%;
+    }
+}
