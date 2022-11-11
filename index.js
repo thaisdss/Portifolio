@@ -15,22 +15,29 @@ const repos = (url) => {
     .then(data => {
         data.forEach(dataRepo => {
             if(dataRepo.name === "Mini-Projects-JS"){
-                projects(dataRepo)
+                createProject(dataRepo)
             }
 
             if(dataRepo.name === "CasaCriativa"){
-                projects(dataRepo)
-                colorLanguage()
+                createProject(dataRepo)
+            }
+
+            if(dataRepo.name === "Aluracord-Matrix"){
+                createProject(dataRepo)
+            }
+
+            if(dataRepo.name === "Projeto-Android"){
+                createProject(dataRepo)
             }
         })
     })
 }
 
-const projects = (data) => {
+const createProject = (data) => {
     const section = document.createElement("section")
     section.classList.add("projects")
     section.innerHTML = `
-    <div>
+    <div class="projectName">
         <img src="assets/folder.svg" alt="Imagem de Folder">
         <p class="projectName">${data.name}</p>
     </div>
@@ -49,10 +56,8 @@ const projects = (data) => {
         <div class="languageColor"></div>
         <p class="projectLanguage">${data.language}</p>
     </div>`
-    
-    document.querySelector("main").appendChild(section)
 
-    id(data.name)
+    insertProject(data.name, section, data.language)
 
     section.addEventListener("click", () => {
         window.open(data.html_url, "_blank")
@@ -60,10 +65,42 @@ const projects = (data) => {
 
 }
 
-const colorLanguage = () => {
-    document.querySelector(".language>div").classList.add("purple")
+const insertProject = (name, section, language) => {
+    if(name == "Mini-Projects-JS"){
+        section.classList.add("project1")
+        document.querySelector("main").appendChild(section)
+        colorLanguage(1, language)
+     }
+
+    if(name == "CasaCriativa"){
+        section.classList.add("project2")
+        document.querySelector("main").appendChild(section)
+        colorLanguage(2, language)
+    }
+
+    if(name == "Aluracord-Matrix"){
+        section.classList.add("project3")
+        document.querySelector("main").appendChild(section)
+        colorLanguage(3, language)
+     }
+
+     if(name == "Projeto-Android"){
+        section.classList.add("project4")
+        document.querySelector("main").appendChild(section)
+        colorLanguage(4, language)
+     }
 }
 
-const id = (name) => {
-    if(name == "Mini-Projects-Js") document.querySelector(".projects").id = "project1" 
+const colorLanguage = (number, language) => {
+    if(language === "JavaScript"){
+        document.querySelector(`.project${number}>.language>div`).classList.add("js")
+    }
+
+    if(language === "HTML"){
+        document.querySelector(`.project${number}>.language>div`).classList.add("html")
+    }
+
+    if(language === "CSS"){
+        document.querySelector(`.project${number}>.language>div`).classList.add("css")
+    }
 }
