@@ -14,6 +14,10 @@ const repos = (url) => {
     .then(response => response.json())
     .then(data => {
         data.forEach(dataRepo => {
+            if(dataRepo.name === "WaiterApp"){
+                createProject(dataRepo)
+            }
+
             if(dataRepo.name === "Mini-Projects-JS"){
                 createProject(dataRepo)
             }
@@ -23,10 +27,6 @@ const repos = (url) => {
             }
 
             if(dataRepo.name === "Aluracord-Matrix"){
-                createProject(dataRepo)
-            }
-
-            if(dataRepo.name === "Projeto-Android"){
                 createProject(dataRepo)
             }
         })
@@ -66,25 +66,25 @@ const createProject = (data) => {
 }
 
 const insertProject = (name, section, language) => {
-    if(name == "Mini-Projects-JS"){
+    if(name == "WaiterApp"){
         section.classList.add("project1")
         document.querySelector("main").appendChild(section)
         colorLanguage(1, language)
      }
 
-    if(name == "CasaCriativa"){
+    if(name == "Mini-Projects-JS"){
         section.classList.add("project2")
         document.querySelector("main").appendChild(section)
         colorLanguage(2, language)
     }
 
-    if(name == "Aluracord-Matrix"){
+    if(name == "CasaCriativa"){
         section.classList.add("project3")
         document.querySelector("main").appendChild(section)
         colorLanguage(3, language)
      }
 
-     if(name == "Projeto-Android"){
+     if(name == "Aluracord-Matrix"){
         section.classList.add("project4")
         document.querySelector("main").appendChild(section)
         colorLanguage(4, language)
@@ -96,8 +96,8 @@ const colorLanguage = (number, language) => {
         document.querySelector(`.project${number}>.language>div`).classList.add("js")
     }
 
-    if(language === "HTML"){
-        document.querySelector(`.project${number}>.language>div`).classList.add("html")
+    if(language === "TypeScript"){
+        document.querySelector(`.project${number}>.language>div`).classList.add("typescript")
     }
 
     if(language === "CSS"){
