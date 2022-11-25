@@ -6,7 +6,9 @@ fetch("https://api.github.com/users/thaisdss")
 })
 
 const avatar = (url) => {
-    document.querySelector("#profile>img").src = url
+    const img = document.createElement("img")
+    img.src = url
+    document.querySelector("#profile").prepend(img)
 }
 
 const repos = (url) => {
