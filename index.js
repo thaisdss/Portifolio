@@ -28,7 +28,7 @@ const repos = (url) => {
                 createProject(dataRepo)
             }
 
-            if(dataRepo.name === "Aluracord-Matrix"){
+            if(dataRepo.name === "Costs"){
                 createProject(dataRepo)
             }
         })
@@ -86,7 +86,7 @@ const insertProject = (name, section, language) => {
         colorLanguage(3, language)
      }
 
-     if(name == "Aluracord-Matrix"){
+     if(name == "Costs"){
         section.classList.add("project4")
         document.querySelector("main").appendChild(section)
         colorLanguage(4, language)
