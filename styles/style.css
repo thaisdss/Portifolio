@@ -132,6 +132,10 @@ section{
   line-height: 1.5;
 }
 
+#aboutMe p:not(:last-of-type){
+  margin-bottom: 15px;
+}
+
 #myProjects{
   grid-area: myProjects;
 
